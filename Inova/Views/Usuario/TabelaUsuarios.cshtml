@@ -1,0 +1,94 @@
+﻿@model List<UsuarioModel>
+@{
+    ViewData["Title"] = "Tabela de Usuários";
+}
+
+@if(TempData["MensagemSucesso"] != null)
+{
+<div class="text-center">
+<div class="alert alert-success " role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    @TempData["MensagemSucesso"]
+</div>
+</div>
+}
+
+@if(TempData["MensagemErro"] != null)
+{
+    <div class="text-center">
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    @TempData["MensagemErro"]
+</div>
+</div>
+}
+
+<br />
+
+
+<div class="page-header">
+        <h1><i class="fas fa-box-open"></i> Controle de Usuários</h1>
+        <p>Veja todos os usuários cadastrados em nossa plataforma.</p>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+
+            <div class="tabela-container">
+                <div class="d-flex justify-content-end">
+                    <a asp-controller="Usuario" asp-action="CriarUsuario" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar Usuário
+                    </a>
+                </div>
+                <table class="table" id="table-usuarios">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Login</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Perfil</th>
+                        <th scope="col">Data de Cadastro</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @if (Model != null && Model.Any())
+                   {
+                     foreach(var usuario in Model)
+                    {
+                        <tr>
+                        <td>@usuario.Id</td>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Login</td>
+                        <td>@usuario.Email</td>
+                        <td>@usuario.Celular</td>
+                        <td>@(usuario.Perfil == Inova.Enums.PerfilEnum.Admin ? "Administrador" : "Padrão")</td>
+                        <td>@usuario.DataCadastro</td>
+                        <td class="d-flex gap-2">
+                            <a asp-controller="Usuario" asp-action="EditarUsuario" asp-route-id="@usuario.Id" class="btn btn-sm btn-warning"
+                            id="btnEditar">
+                            <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a asp-controller="Usuario" asp-action="DeletarUsuario" asp-route-id="@usuario.Id" class="btn btn-sm btn-danger"
+                            id="btnDeletar">
+                                <i class="fas fa-trash"></i> Deletar
+                            </a>
+                            
+                        </td>
+                        </tr>
+                     }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Nenhum usuário encontrado.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <!-- Tabela de Itens Perdidos -->
+            
+        </div>
+    </main>

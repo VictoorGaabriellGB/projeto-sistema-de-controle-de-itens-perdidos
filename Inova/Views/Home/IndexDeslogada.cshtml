@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial Deslogada";
+    Layout = "_LayoutDeslogada";
+}
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1><i class="fas fa-heart"></i> Central de Achados e Perdidos</h1>
+            <p>Ajudamos a reunir você com seus pertences perdidos. Simples, rápido e eficiente.</p>
+        </section>
+
+         <!-- How it Works -->
+        <section class="how-it-works">
+            <h2>Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Faça login ou se cadastre</h4>
+                    <p>Para começar, faça login na nossa plataforma ou crie uma conta.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Cadastre seu Item ou Achado</h4>
+                    <p>Preencha o formulário com as informações do item perdido ou encontrado.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Aguarde o contato </h4>
+                    <p>Aguarde o contato da nossa equipe com as instruções.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Cards -->
+        <div class="action-cards">
+            <div class="action-card lost">
+                <i class="fas fa-frown"></i>
+                <h3>Perdi Algo</h3>
+                <p>Perdeu algum item? Cadastre aqui com descrição detalhada e aguarde o contato da nossa equipe.</p>
+                <a asp-controller="Login" asp-action="Login" class="btn btn-primary">Reportar Perdido</a>
+            </div>
+
+            <div class="action-card found">
+                <i class="fas fa-smile"></i>
+                <h3>Encontrei Algo</h3>
+                <p>Encontrou um item que não é seu? Ajude alguém cadastrando o achado em nossa plataforma.</p>
+                <a asp-controller="Login" asp-action="Login" class="btn btn-primary">Reportar Achado</a>
+            </div>
+
+            <div class="action-card help">
+                <i class="fas fa-question-circle"></i>
+                <h3>Precisa de Ajuda?</h3>
+                <p>Dúvidas sobre como usar a plataforma? Entre em contato com nossa equipe de suporte.</p>
+                <a href="https://krw.eng.br/contato/" target="_blank" class="btn btn-primary">Falar Conosco</a>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">127</div>
+                <div class="stat-label"><strong>Itens Reunidos</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">43</div>
+                <div class="stat-label"><strong>Pessoas Ajudadas</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label"><strong>Itens Aguardando</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label"><strong>Taxa de Sucesso</strong></div>
+            </div>
+        </section>
+    </main>

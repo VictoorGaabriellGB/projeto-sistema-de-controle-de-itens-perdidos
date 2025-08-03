@@ -1,0 +1,17 @@
+@model TabelaModel
+@{
+    ViewData["Title"] = "Deletar Item Perdido";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/criar.css">
+<div class="container">
+        <h2>Deletar Item Perdido 📋</h2>
+            <div class="mb-3">
+                <h3>Deseja Realmente Deletar esse Item (@Model.NomeItem)?</h3>
+            <div class="d-grid mt-4">
+                <a class="btn btn-primary" asp-controller="Tabela" asp-action="Apagar" asp-route-id="@Model.Id" role="button">Confirmar Deleção</a>
+            </div>
+            <div class="d-grid mt-4">
+                <a asp-controller="Tabela" asp-action="Tabela" class="btn btn-secondary">Voltar</a>
+            </div>
+    </div>

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inova", "Inova.csproj", "{0BD42498-1349-D2BD-8979-F63E2B7ED165}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD42498-1349-D2BD-8979-F63E2B7ED165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD42498-1349-D2BD-8979-F63E2B7ED165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD42498-1349-D2BD-8979-F63E2B7ED165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD42498-1349-D2BD-8979-F63E2B7ED165}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3FAC4E7-D6C4-45DE-AFAB-7E75CE8BF93F}
+	EndGlobalSection
+EndGlobal

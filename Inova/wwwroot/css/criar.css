@@ -1,0 +1,64 @@
+/* --- Estilos Gerais --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
+        }
+
+        /* --- Estilo do Container (Cartão do Formulário) --- */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+        }
+
+        /* --- Título --- */
+        h2 {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        /* --- Estilos do Formulário --- */
+        .form-label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #009688; /* Tom de verde-azulado */
+            box-shadow: 0 0 0 0.25rem rgba(0, 150, 136, 0.25);
+            outline: 0;
+        }
+        
+        /* --- Estilo do Botão --- */
+        .btn-primary {
+            background-color: #009688;
+            border-color: #009688;
+            padding: 12px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #00796b; /* Tom mais escuro para o hover */
+            border-color: #00695c;
+            transform: translateY(-2px); /* Efeito de elevação */
+        }

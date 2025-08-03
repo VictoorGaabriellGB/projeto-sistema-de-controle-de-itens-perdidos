@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1><i class="fas fa-heart"></i> Central de Achados e Perdidos</h1>
+            <p>Ajudamos a reunir você com seus pertences perdidos. Simples, rápido e eficiente.</p>
+        </section>
+
+         <!-- How it Works -->
+        <section class="how-it-works">
+            <h2>Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Faça login ou se cadastre</h4>
+                    <p>Para começar, faça login na nossa plataforma ou crie uma conta.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Cadastre seu Item ou Achado</h4>
+                    <p>Preencha o formulário com as informações do item perdido ou encontrado.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Aguarde o contato </h4>
+                    <p>Aguarde o contato da nossa equipe com as instruções.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Cards -->
+        <section class="action-cards">
+            <div class="action-card lost" onclick="openModal('lost')">
+                <i class="fas fa-frown"></i>
+                <h3>Perdi Algo</h3>
+                <p>Perdeu algum item? Cadastre aqui com descrição detalhada e aguarde o contato da nossa equipe.</p>
+                <button>Reportar Perdido</button>
+            </div>
+
+            <div class="action-card found" onclick="openModal('found')">
+                <i class="fas fa-smile"></i>
+                <h3>Encontrei Algo</h3>
+                <p>Encontrou um item que não é seu? Ajude alguém cadastrando o achado em nossa plataforma.</p>
+                <button>Reportar Achado</button>
+            </div>
+
+            <div class="action-card help">
+                <i class="fas fa-question-circle"></i>
+                <h3>Precisa de Ajuda?</h3>
+                <p>Dúvidas sobre como usar a plataforma? Entre em contato com nossa equipe de suporte.</p>
+                <button onclick="window.open('https://krw.eng.br/contato/', '_blank')">Falar Conosco</button>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">127</div>
+                <div class="stat-label"><strong>Itens Reunidos</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">43</div>
+                <div class="stat-label"><strong>Pessoas Ajudadas</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label"><strong>Itens Aguardando</strong></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label"><strong>Taxa de Sucesso</strong></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Lost Items -->
+    <div class="form-modal" id="lost-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('lost')">&times;</button>
+            <div class="modal-header">
+                <h2><i class="fas fa-frown"></i> Reportar Item Perdido</h2>
+                <p>Preencha os dados abaixo para nos ajudar a encontrar seu item</p>
+            </div>
+            <div class="quick-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Que tipo de item você perdeu?</label>
+                        <select>
+                            <option>Selecione uma categoria</option>
+                            <option>📱 Celular</option>
+                            <option>🔑 Chaves</option>
+                            <option>👓 Óculos</option>
+                            <option>👛 Carteira</option>
+                            <option>📄 Documentos</option>
+                            <option>💻 Eletrônicos</option>
+                            <option>💍 Joias</option>
+                            <option>👕 Roupas</option>
+                            <option>🎒 Bolsas/Mochilas</option>
+                            <option>🔧 Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Onde você perdeu?</label>
+                        <input type="text" placeholder="Ex: Escritório, Estacionamento...">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Seu nome</label>
+                        <input type="text" placeholder="Como posso te chamar?">
+                    </div>
+                    <div class="form-group">
+                        <label>Seu telefone</label>
+                        <input type="tel" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Descreva o item perdido</label>
+                    <textarea rows="3" placeholder="Cor, marca, características especiais..."></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitForm('lost')">📝 Cadastrar Item Perdido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Found Items -->
+    <div class="form-modal" id="found-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('found')">&times;</button>
+            <div class="modal-header">
+                <h2><i class="fas fa-smile"></i> Reportar Item Encontrado</h2>
+                <p>Preencha os dados abaixo para ajudar alguém a recuperar seu item</p>
+            </div>
+            <div class="quick-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Que tipo de item você encontrou?</label>
+                        <select>
+                            <option>Selecione uma categoria</option>
+                            <option>📱 Celular</option>
+                            <option>🔑 Chaves</option>
+                            <option>👓 Óculos</option>
+                            <option>👛 Carteira</option>
+                            <option>📄 Documentos</option>
+                            <option>💻 Eletrônicos</option>
+                            <option>💍 Joias</option>
+                            <option>👕 Roupas</option>
+                            <option>🎒 Bolsas/Mochilas</option>
+                            <option>🔧 Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Onde você encontrou?</label>
+                        <input type="text" placeholder="Local exato do achado">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Seu nome</label>
+                        <input type="text" placeholder="Como posso te chamar?">
+                    </div>
+                    <div class="form-group">
+                        <label>Seu telefone</label>
+                        <input type="tel" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Descreva o item encontrado</label>
+                    <textarea rows="3" placeholder="Cor, marca, estado de conservação..."></textarea>
+                </div>
+                <button class="submit-btn" onclick="submitForm('found')">💚 Cadastrar Item Encontrado</button>
+            </div>
+        </div>
+    </div>

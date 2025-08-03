@@ -1,0 +1,17 @@
+@model UsuarioModel
+@{
+    ViewData["Title"] = "Deletar Usuário";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/criar.css">
+<div class="container">
+        <h2>Apagar Usuário 📋</h2>
+            <div class="mb-3">
+                <h3>Deseja Realmente Apagar esse Usuário? (@Model.Nome)?</h3>
+            <div class="d-grid mt-4">
+                <a class="btn btn-primary" asp-controller="Usuario" asp-action="Apagar" asp-route-id="@Model.Id" role="button">Confirmar Exclusão</a>
+            </div>
+            <div class="d-grid mt-4">
+                <a asp-controller="Usuario" asp-action="TabelaUsuarios" class="btn btn-secondary">Voltar</a>
+            </div>
+    </div>

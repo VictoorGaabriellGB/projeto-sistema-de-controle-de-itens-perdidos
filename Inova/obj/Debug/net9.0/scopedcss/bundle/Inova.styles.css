@@ -1,0 +1,346 @@
+/* _content/Inova/Views/Shared/LayoutCriar.cshtml.rz.scp.css */
+.header-company-lp[b-unrj9bkf5u] {
+ background-color: #FCFDF9;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content[b-unrj9bkf5u] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-link[b-unrj9bkf5u] {
+  display: block;
+}
+
+.company-logo[b-unrj9bkf5u] {
+  height: 85px;
+}
+
+.main-nav ul[b-unrj9bkf5u] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav ul li a[b-unrj9bkf5u] {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-nav ul li a i[b-unrj9bkf5u] {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.main-nav ul li a:hover[b-unrj9bkf5u] {
+  background-color: #e6f0ff;
+  color: #003d7a;
+}
+/* _content/Inova/Views/Shared/_Layout.cshtml.rz.scp.css */
+.header-company-lp[b-z8w17myri3] {
+  background-color: #FCFDF9;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content[b-z8w17myri3] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-link[b-z8w17myri3] {
+  display: block;
+}
+
+.company-logo[b-z8w17myri3] {
+  height: 100px;
+  width: auto;
+}
+
+.main-nav ul[b-z8w17myri3] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav ul li a[b-z8w17myri3] {
+  color: #06C978;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-nav ul li a i[b-z8w17myri3] {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.main-nav ul li a:hover[b-z8w17myri3] {
+  background-color: #e6f0ff;
+  color: #003d7a;
+}
+
+/* Footer Styles */
+
+.footer-company-lp[b-z8w17myri3] {
+  background-color: #023131;
+  color: #ecf0f1;
+  padding: 40px 30px;
+  font-size: 0.9em;
+}
+
+.footer-grid[b-z8w17myri3] {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 1px;
+  gap: 20px;
+}
+
+.footer-section[b-z8w17myri3] {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3[b-z8w17myri3] {
+  color: #1abc9c;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section h3 i[b-z8w17myri3] {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.footer-section p[b-z8w17myri3] {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.footer-section a[b-z8w17myri3] {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons[b-z8w17myri3] {
+  margin-top: 15px;
+}
+
+.social-icons a[b-z8w17myri3] {
+  color: #ecf0f1;
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.Facebook:hover[b-z8w17myri3]{
+  color: #0059ff;
+}
+
+.LinkedIn:hover[b-z8w17myri3]{
+  color: #0471a4;
+}
+
+.footer-bottom[b-z8w17myri3] {
+  border-top: 1px solid #3a536b;
+  padding-top: 20px;
+  text-align: center;
+  color: #95a5a6;
+  font-size: 0.8em;
+}
+
+.footer-bottom:hover[b-z8w17myri3]{
+  color: #27ae60;
+}
+a[b-z8w17myri3] {
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* _content/Inova/Views/Shared/_LayoutDeslogada.cshtml.rz.scp.css */
+.header-company-lp[b-4lb5nhyqin] {
+  background-color: #FCFDF9;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content[b-4lb5nhyqin] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-link[b-4lb5nhyqin] {
+  display: block;
+}
+
+.company-logo[b-4lb5nhyqin] {
+  height: 100px;
+  width: auto;
+}
+
+.main-nav ul[b-4lb5nhyqin] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav ul li a[b-4lb5nhyqin] {
+  color: #06C978;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-nav ul li a i[b-4lb5nhyqin] {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.main-nav ul li a:hover[b-4lb5nhyqin] {
+  background-color: #e6f0ff;
+  color: #003d7a;
+}
+
+/* Footer Styles */
+
+.footer-company-lp[b-4lb5nhyqin] {
+  background-color: #023131;
+  color: #ecf0f1;
+  padding: 40px 30px;
+  font-size: 0.9em;
+}
+
+.footer-grid[b-4lb5nhyqin] {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 1px;
+  gap: 20px;
+}
+
+.footer-section[b-4lb5nhyqin] {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3[b-4lb5nhyqin] {
+  color: #1abc9c;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section h3 i[b-4lb5nhyqin] {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.footer-section p[b-4lb5nhyqin] {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.footer-section a[b-4lb5nhyqin] {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons[b-4lb5nhyqin] {
+  margin-top: 15px;
+}
+
+.social-icons a[b-4lb5nhyqin] {
+  color: #ecf0f1;
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.Facebook:hover[b-4lb5nhyqin]{
+  color: #0059ff;
+}
+
+.LinkedIn:hover[b-4lb5nhyqin]{
+  color: #0471a4;
+}
+
+.footer-bottom[b-4lb5nhyqin] {
+  border-top: 1px solid #3a536b;
+  padding-top: 20px;
+  text-align: center;
+  color: #95a5a6;
+  font-size: 0.8em;
+}
+
+.footer-bottom:hover[b-4lb5nhyqin]{
+  color: #27ae60;
+}
+a[b-4lb5nhyqin] {
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn[b-4lb5nhyqin] {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: #025959;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover[b-4lb5nhyqin] {
+    background: #1abc9c;
+}
+/* _content/Inova/Views/Shared/_LayoutTelaDeLogin.cshtml.rz.scp.css */

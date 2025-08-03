@@ -1,0 +1,114 @@
+﻿@model List<TabelaModel>
+@{
+    ViewData["Title"] = "Tabela";
+}
+
+@if(TempData["MensagemSucesso"] != null)
+{
+<div class="text-center">
+<div class="alert alert-success " role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    @TempData["MensagemSucesso"]
+</div>
+</div>
+}
+
+@if(TempData["MensagemErro"] != null)
+{
+    <div class="text-center">
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    @TempData["MensagemErro"]
+</div>
+</div>
+}
+
+<br />
+
+
+<div class="page-header">
+        <h1><i class="fas fa-box-open"></i> Itens Perdidos</h1>
+        <p>Veja todos os itens perdidos cadastrados em nossa plataforma. Talvez o seu esteja aqui!</p>
+    </div>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            
+            <!-- Estatísticas -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">42</div>
+                    <div class="stat-label">Itens Perdidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Últimos 7 dias</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Reunidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">34</div>
+                    <div class="stat-label">Aguardando</div>
+                </div>
+            </div>
+
+            <!-- Filtros de Busca -->
+            <div class="tabela-container">
+                <div class="d-flex justify-content-end">
+                    <a asp-controller="Tabela" asp-action="Criar" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Reportar Item Perdido
+                    </a>
+                </div><table class="table" id="table-itens">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome do Item</th>
+                        <th scope="col">Tipo do Item</th>
+                        <th scope="col">Nome de Quem Encontrou</th>
+                        <th scope="col">Número para Contato</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Data do Achado</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @if (Model != null && Model.Any())
+                   {
+                     foreach(TabelaModel item in Model)
+                    {
+                        <tr>
+                        <td>@item.Id</td>
+                        <td>@item.NomeItem</td>
+                        <td>@item.Tipo</td>
+                        <td>@item.NomePessoa</td>
+                        <td>@item.Celular</td>
+                        <td>@item.Email</td>
+                        <td>@item.DataAchado.ToShortDateString()</td>
+                        <td class="d-flex gap-2">
+                            <a asp-controller="Tabela" asp-action="Editar" asp-route-id="@item.Id" class="btn btn-sm btn-warning"
+                            id="btnEditar">
+                            <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a asp-controller="Tabela" asp-action="Deletar" asp-route-id="@item.Id" class="btn btn-sm btn-danger"
+                            id="btnDeletar">
+                                <i class="fas fa-trash"></i> Deletar
+                            </a>
+                            
+                        </td>
+                        </tr>
+                    }
+                   }
+                   else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Nenhum item encontrado.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <!-- Tabela de Itens Perdidos -->
+            
+        </div>
+    </main>

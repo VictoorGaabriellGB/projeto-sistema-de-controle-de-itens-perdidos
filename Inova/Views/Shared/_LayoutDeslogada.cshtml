@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Inova</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Inova.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tabela.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href=" /Imagens/icon.png" type="image/x-icon">
+    <link href="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.css" rel="stylesheet"
+        integrity="sha384-d76uxpdVr9QyCSR9vVSYdOAZeRzNUN8A4JVqUHBVXyGxZ+oOfrZVHC/1Y58mhyNg" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header-company-lp">
+        <div class="header-content">
+            <a asp-controller="Home" asp-action="Index" class="logo-link">
+                <img src=" /Imagens/Zardon.png" alt="Logo Zardon" class="company-logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a asp-controller="Login" asp-action="Login" class="btn btn-primary">
+                            <i class="fas fa-user"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-company-lp">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3><i class="fas fa-building"></i> Sobre a Empresa</h3>
+                <p>Nossa empresa se preocupa com você e seus pertences. <br>
+                    Esta plataforma foi criada para ajudar a reunir itens perdidos com seus donos.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3><i class="fas fa-address-card"></i> Contato</h3>
+                <p>E-mail: <strong>zardongroup@gmail.com</strong></p>
+                <p>Telefone: <strong>(81) 99999-9999</strong></p>
+                <p>Desenvolvido por: <a href="./EquipeADA.html"><strong>Equipe ADA</strong></a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zardon Group&trade;. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.js"
+        integrity="sha384-JRUjeYWWUGO171YFugrU0ksSC6CaWnl4XzwP6mNjnnDh4hfFGRyYbEXwryGwLsEp"
+        crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
+
