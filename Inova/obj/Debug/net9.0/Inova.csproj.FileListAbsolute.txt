@@ -536,6 +536,7 @@ C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\scopedcss\Views\Shared\_LayoutDeslogada.cshtml.rz.scp.css
 C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\scopedcss\Views\Shared\_LayoutTelaDeLogin.cshtml.rz.scp.css
-C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\4drd8pzw7r-ftj2ick416.gz
 C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\obr4ajv4p6-acnjvbozxj.gz
 C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\2jauxi4z7d-acnjvbozxj.gz
+C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\Inova.sourcelink.json
+C:\Users\lexus\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\4drd8pzw7r-fobwtygloi.gz

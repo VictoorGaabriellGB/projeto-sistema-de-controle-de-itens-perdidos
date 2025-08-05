@@ -1,0 +1,63 @@
+@model TabelaModel
+@{
+    ViewData["Title"] = "Criar Item Perdido";
+    Layout = "~/Views/Shared/LayoutCriar.cshtml";
+}
+
+    <link rel="stylesheet" href="~/css/criar.css">
+
+    <div class="container">
+        <h2>Cadastro de Item Perdido 📋</h2>
+        <form asp-controller="Tabela" asp-action="Criar2" method="post">
+            <div class="mb-3">
+                <label for="itemName" class="form-label">Nome do Item</label>
+                <input type="text" asp-for="NomeItem" class="form-control" id="itemName" placeholder="Ex: Chaveiro, Garrafa de água" required>
+                @Html.ValidationMessageFor(x => x.NomeItem, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="itemType" class="form-label">Tipo do Item</label>
+                <select class="form-select" asp-for="Tipo" id="itemType" required>
+                    <option selected disabled value="">Selecione o tipo do item...</option>
+                    <option>📱 Celular</option>
+                    <option>🔑 Chaves</option>
+                    <option>👓 Óculos</option>
+                    <option>👛 Carteira</option>
+                    <option>📄 Documentos</option>
+                    <option>💻 Eletrônicos</option>
+                    <option>💍 Joias</option>
+                    <option>👕 Roupas</option>
+                    <option>🎒 Bolsas/Mochilas</option>
+                    <option>🔧 Outros</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Tipo, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="finderName" class="form-label">Nome de Quem Encontrou</label>
+                <input type="text" asp-for="NomePessoa" class="form-control" id="finderName" placeholder="Digite seu nome completo" required>
+                @Html.ValidationMessageFor(x => x.NomePessoa, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="itemDate" class="form-label">Data do Achado</label>
+                <input type="date" asp-for="DataAchado" class="form-control" id="itemDate" required>
+                @Html.ValidationMessageFor(x => x.DataAchado, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="contactNumber" class="form-label">Número para Contato</label>
+                <input type="tel" asp-for="Celular" class="form-control" id="contactNumber" placeholder="(XX) XXXXX-XXXX" required>
+                @Html.ValidationMessageFor(x => x.Celular, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email para Contato</label>
+                <input type="email" asp-for="Email" class="form-control" id="contactEmail" placeholder="seuemail@exemplo.com" required>
+                @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-primary">Cadastrar Item</button> 
+            </div>
+            <div class="d-grid mt-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

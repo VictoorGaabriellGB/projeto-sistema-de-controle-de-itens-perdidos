@@ -29,6 +29,12 @@ namespace Inova.Controllers
         {
             return View();
         }
+
+        public IActionResult CriarHome()
+        {
+            return View();
+        }
+
         public IActionResult Editar(int id)
         {
             TabelaModel item = _tabelaRepositorio.ListarPorId(id);
@@ -82,6 +88,26 @@ namespace Inova.Controllers
             {
                 TempData["MensagemErro"] = $"Ops, não foi possível adicionar o item! Erro: {erro.Message}";
                 return View("Tabela");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Criar2(TabelaModel item)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    item = _tabelaRepositorio.Adicionar(item);
+                    TempData["MensagemSucessoHome"] = "Item adicionado com sucesso! Aguarde o retorno da nossa equipe.";
+                    return RedirectToAction("Index", "Home");
+                }
+                 return View(item);
+            }
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErroHome"] = $"Ops, não foi possível adicionar seu item! Erro: {erro.Message}";
+                return RedirectToAction("Index", "Home");
             }
         }
 

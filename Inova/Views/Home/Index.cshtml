@@ -1,6 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Página Inicial";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@if(TempData["MensagemSucessoHome"] != null)
+{
+    <div class="text-center">
+        <div class="alert alert-success " role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+            @TempData["MensagemSucessoHome"]
+        </div>
+    </div>
+}
+
+@if(TempData["MensagemErroHome"] != null)
+{
+    <div class="text-center">
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+            @TempData["MensagemErroHome"]
+        </div>
+    </div>
+}
+
 
     <main class="main-content">
         <!-- Hero Section -->
@@ -37,21 +59,21 @@
                 <i class="fas fa-frown"></i>
                 <h3>Perdi Algo</h3>
                 <p>Perdeu algum item? Cadastre aqui com descrição detalhada e aguarde o contato da nossa equipe.</p>
-                <button>Reportar Perdido</button>
+                <a class="btn">Reportar Perdido</a>
             </div>
 
             <div class="action-card found" onclick="openModal('found')">
                 <i class="fas fa-smile"></i>
                 <h3>Encontrei Algo</h3>
                 <p>Encontrou um item que não é seu? Ajude alguém cadastrando o achado em nossa plataforma.</p>
-                <button>Reportar Achado</button>
+                <a asp-controller="Tabela" asp-action="CriarHome" class="btn">Reportar Achado</a>
             </div>
 
             <div class="action-card help">
                 <i class="fas fa-question-circle"></i>
                 <h3>Precisa de Ajuda?</h3>
                 <p>Dúvidas sobre como usar a plataforma? Entre em contato com nossa equipe de suporte.</p>
-                <button onclick="window.open('https://krw.eng.br/contato/', '_blank')">Falar Conosco</button>
+                <a class="btn" onclick="window.open('https://krw.eng.br/contato/', '_blank')">Falar Conosco</a>
             </div>
         </section>
 
