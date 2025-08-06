@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Inova.Filters;
 using Inova.Models;
 using Inova.Repositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,10 @@ using Microsoft.Extensions.Logging;
 
 namespace Inova.Controllers
 {
+    [PaginaRestritaSomenteAdmin]
     public class UsuarioController : Controller
     {
-         private readonly IUsuarioRepositorio _usuarioRepositorio;
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
 
         public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
         {
@@ -35,12 +37,12 @@ namespace Inova.Controllers
             return View(usuario);
         }
 
-         public IActionResult DeletarUsuario(int id)
+        public IActionResult DeletarUsuario(int id)
         {
             UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
             return View(usuario);
         }
-        
+
         public IActionResult Apagar(int id)
         {
             try
@@ -72,11 +74,11 @@ namespace Inova.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                   usuario = _usuarioRepositorio.Adicionar(usuario);
+                    usuario = _usuarioRepositorio.Adicionar(usuario);
                     TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso!";
                     return RedirectToAction("TabelaUsuarios");
                 }
-                 return View(usuario);
+                return View(usuario);
             }
             catch (System.Exception erro)
             {
@@ -91,7 +93,7 @@ namespace Inova.Controllers
         {
             try
             {
-                
+
                 UsuarioModel usuario = null;
 
                 if (ModelState.IsValid)
@@ -110,7 +112,7 @@ namespace Inova.Controllers
                     TempData["MensagemSucesso"] = "Usuário alterado com sucesso!";
                     return RedirectToAction("TabelaUsuarios");
                 }
-            return View(usuario);
+                return View(usuario);
             }
             catch (System.Exception erro)
             {

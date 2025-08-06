@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Área Restrita";
+    Layout= "_LayoutVazia"; // Não usar o layout padrão
+}
+
+<link rel="stylesheet" href="~/css/restrito.css">
+
+<div class="container">
+    <div class="icon">🔒</div>
+    <div class="error-code">403</div>
+    <h1>Acesso Restrito</h1>
+    <p class="message">
+        Você não possui permissão para acessar esta página. 
+        Esta área é restrita apenas para usuários autorizados.
+    </p>
+    <a class="back-button" asp-controller="Home" asp-action="Index">
+        Voltar
+    </a>
+    <div class="details">
+        Se você acredita que deveria ter acesso a esta página, 
+        entre em contato com o administrador do sistema.
+    </div>
+</div>

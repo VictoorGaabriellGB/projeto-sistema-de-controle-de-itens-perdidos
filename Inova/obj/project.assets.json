@@ -4838,11 +4838,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lexus\\Desktop\\InovaDF\\Inova\\Inova.csproj",
+      "projectUniqueName": "C:\\Users\\lexus\\OneDrive\\Desktop\\InovaDF\\Inova\\Inova.csproj",
       "projectName": "Inova",
-      "projectPath": "C:\\Users\\lexus\\Desktop\\InovaDF\\Inova\\Inova.csproj",
+      "projectPath": "C:\\Users\\lexus\\OneDrive\\Desktop\\InovaDF\\Inova\\Inova.csproj",
       "packagesPath": "C:\\Users\\lexus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lexus\\Desktop\\InovaDF\\Inova\\obj\\",
+      "outputPath": "C:\\Users\\lexus\\OneDrive\\Desktop\\InovaDF\\Inova\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

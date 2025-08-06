@@ -18,31 +18,8 @@
 <body>
     <header class="header-company-lp">
         <div class="header-content">
-    <a asp-controller="Home" asp-action="Index" class="logo-link">
-        <img src=" /Imagens/Zardon.png" alt="Logo Zardon" class="company-logo">
-    </a>
-    <nav class="main-nav">
-        <ul>
-            <li>
-                <a asp-controller="Tabela" asp-action="Tabela"
-                    class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Tabela" ? "active" : "")">
-                    Tabela
-                </a>
-            </li>
-            <li>
-                <a asp-controller="Usuario" asp-action="TabelaUsuarios"
-                    class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Usuario" ? "active" : "")">
-                    Usuários
-                </a>
-            </li>
-            <li>
-                <a asp-controller="Login" asp-action="Sair" class="menu-btn">
-                    Sair
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
+            @await Component.InvokeAsync("Menu")
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

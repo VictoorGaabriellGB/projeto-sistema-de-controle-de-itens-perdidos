@@ -1,17 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Inova.Models;
+using Inova.Helper;
+using Inova.Filters;
 
 namespace Inova.Controllers;
 
+[PaginaParaUsuarioLogado]
 public class HomeController : Controller
 {
 
     public IActionResult Index()
-    {
-        return View();
-    }
-    public IActionResult IndexDeslogada()
     {
         return View();
     }

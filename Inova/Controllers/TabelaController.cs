@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Inova.Filters;
 using Inova.Models;
 using Inova.Repositorio;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Inova.Controllers
 {
+    [PaginaRestritaSomenteAdmin]
     public class TabelaController : Controller
     {
         private readonly ITabelaRepositorio _tabelaRepositorio;
@@ -20,9 +22,9 @@ namespace Inova.Controllers
             _tabelaRepositorio = tabelaRepositorio;
         }
 
-           public IActionResult Tabela()
+        public IActionResult Tabela()
         {
-          List<TabelaModel> itens = _tabelaRepositorio.BuscarTodos();
+            List<TabelaModel> itens = _tabelaRepositorio.BuscarTodos();
             return View(itens);
         }
         public IActionResult Criar()
@@ -82,7 +84,7 @@ namespace Inova.Controllers
                     TempData["MensagemSucesso"] = "Item adicionado com sucesso!";
                     return RedirectToAction("Tabela");
                 }
-                 return View(item);
+                return View(item);
             }
             catch (System.Exception erro)
             {
@@ -102,7 +104,7 @@ namespace Inova.Controllers
                     TempData["MensagemSucessoHome"] = "Item adicionado com sucesso! Aguarde o retorno da nossa equipe.";
                     return RedirectToAction("Index", "Home");
                 }
-                 return View(item);
+                return View(item);
             }
             catch (System.Exception erro)
             {
@@ -117,12 +119,12 @@ namespace Inova.Controllers
             try
             {
                 if (ModelState.IsValid)
-            {
-                TempData["MensagemSucesso"] = "Informações do item alteradas com sucesso!";
-                _tabelaRepositorio.Atualizar(item);
-                return RedirectToAction("Tabela");
-            }
-            return View("Editar",item);
+                {
+                    TempData["MensagemSucesso"] = "Informações do item alteradas com sucesso!";
+                    _tabelaRepositorio.Atualizar(item);
+                    return RedirectToAction("Tabela");
+                }
+                return View("Editar", item);
             }
             catch (System.Exception erro)
             {
@@ -130,7 +132,7 @@ namespace Inova.Controllers
                 return View("Editar", item);
             }
         }
-        
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

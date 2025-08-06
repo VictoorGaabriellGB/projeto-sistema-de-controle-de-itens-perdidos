@@ -30,7 +30,7 @@ namespace Inova.Helper
         public void CriarSessaoDoUsuario(UsuarioModel usuario)
         {
             string valor = JsonSerializer.Serialize(usuario);
-            _httpContext.HttpContext.Session.SetString("sessaoUsuarioLogado", "valor");
+            _httpContext.HttpContext.Session.SetString("sessaoUsuarioLogado", valor);
         }
 
         public void RemoverSessaoDoUsuario()

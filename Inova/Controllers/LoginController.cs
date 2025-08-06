@@ -34,6 +34,12 @@ namespace Inova.Controllers
             return RedirectToAction("Login");
         }
 
+        public IActionResult IndexDeslogada()
+        {
+            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Entrar(LoginModel loginModel)
         {
