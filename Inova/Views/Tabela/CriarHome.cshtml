@@ -42,6 +42,11 @@
                 @Html.ValidationMessageFor(x => x.DataAchado, "", new { @class = "text-danger" })
             </div>
             <div class="mb-3">
+                <label for="local" class="form-label">Onde Foi Encontrado</label>
+                <input type="text" asp-for="Local" class="form-control" id="Local" placeholder="Digite o local onde o item foi encontrado" required>
+                @Html.ValidationMessageFor(x => x.Local, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
                 <label for="contactNumber" class="form-label">Número para Contato</label>
                 <input type="tel" asp-for="Celular" class="form-control" id="contactNumber" placeholder="(XX) XXXXX-XXXX" required>
                 @Html.ValidationMessageFor(x => x.Celular, "", new { @class = "text-danger" })

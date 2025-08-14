@@ -8,7 +8,7 @@
 
     <div class="container">
         <h2>Cadastro de Item Perdido 📋</h2>
-        <form asp-controller="Tabela" asp-action="Criar" method="post">
+        <form asp-controller="Tabela" asp-action="Criar" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="itemName" class="form-label">Nome do Item</label>
                 <input type="text" asp-for="NomeItem" class="form-control" id="itemName" placeholder="Ex: Chaveiro, Garrafa de água" required>
@@ -42,6 +42,11 @@
                 @Html.ValidationMessageFor(x => x.DataAchado, "", new { @class = "text-danger" })
             </div>
             <div class="mb-3">
+                <label for="local" class="form-label">Onde Foi Encontrado</label>
+                <input type="text" asp-for="Local" class="form-control" id="Local" placeholder="Digite o local onde o item foi encontrado" required>
+                @Html.ValidationMessageFor(x => x.Local, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
                 <label for="contactNumber" class="form-label">Número para Contato</label>
                 <input type="tel" asp-for="Celular" class="form-control" id="contactNumber" placeholder="(XX) XXXXX-XXXX" required>
                 @Html.ValidationMessageFor(x => x.Celular, "", new { @class = "text-danger" })
@@ -50,6 +55,10 @@
                 <label for="contactEmail" class="form-label">Email para Contato</label>
                 <input type="email" asp-for="Email" class="form-control" id="contactEmail" placeholder="seuemail@exemplo.com" required>
                 @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3">
+                <label for="imagem" class="form-label">Foto do Item (opcional)</label>
+                <input type="file" name="imagem" id="imagem" accept="image/*" class="form-control" />
             </div>
             <div class="d-grid mt-4">
                 <button type="submit" class="btn btn-primary">Cadastrar Item</button> 

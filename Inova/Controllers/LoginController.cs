@@ -28,6 +28,12 @@ namespace Inova.Controllers
             return View();
         }
 
+        public IActionResult Cadastro()
+        {
+            if(_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
+            return View();
+        }
+
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoDoUsuario();
@@ -57,7 +63,13 @@ namespace Inova.Controllers
                         if (usuario.SenhaValida(loginModel.Senha))
                         {
                             _sessao.CriarSessaoDoUsuario(usuario);
+
+                            if (usuario.Perfil == Enums.PerfilEnum.Admin)
+                            {
+                                return RedirectToAction("IndexAdm", "Home");
+                            }
                             return RedirectToAction("Index", "Home");
+
                         }
                         TempData["MensagemErro"] = "Senha ou usuário inválida, tente novamente.";
                     }

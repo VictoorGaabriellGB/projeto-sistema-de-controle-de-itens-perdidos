@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Home/IndexAdm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleEFkbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Login/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2FkYXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Login/IndexDeslogada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXhEZXNsb2dhZGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Tabela/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFiZWxhXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Tabela/ListaPublica.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFiZWxhXExpc3RhUHVibGljYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lexus/OneDrive/Desktop/InovaDF/Inova/Views/Tabela/Tabela.cshtml]

@@ -23,6 +23,9 @@ namespace Inova.Models
         public string Email { get; set; }
         public DateTime DataAchado { get; set; }
         public DateTime DataCadastro { get; set; }
+        public string CaminhoImagem { get; set; }
+        [Required(ErrorMessage = "O Local é obrigatório.")]
+        public string Local { get; set; }
         
     }
 }

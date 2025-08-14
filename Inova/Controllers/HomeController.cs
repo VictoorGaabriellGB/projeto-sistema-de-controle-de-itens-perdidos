@@ -14,7 +14,12 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [PaginaRestritaSomenteAdmin]
+    public IActionResult IndexAdm()
+    {
+        return View();
+    }
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

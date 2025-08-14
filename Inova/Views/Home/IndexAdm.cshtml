@@ -1,0 +1,122 @@
+@{
+    ViewData["Title"] = "Página Inicial - Adm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/dashboard.css">
+    
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1 class="welcome-title">Dashboard Administrativo</h1>
+            <p class="welcome-subtitle">Gerencie itens perdidos, usuários e monitore a atividade do sistema</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon items">📦</div>
+                <div class="stat-number" id="totalItems">127</div>
+                <div class="stat-label">Itens Cadastrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon users">👥</div>
+                <div class="stat-number" id="totalUsers">89</div>
+                <div class="stat-label">Usuários Registrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon pending">⏳</div>
+                <div class="stat-number" id="pendingItems">23</div>
+                <div class="stat-label">Pendentes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon resolved">✅</div>
+                <div class="stat-number" id="resolvedItems">104</div>
+                <div class="stat-label">Resolvidos</div>
+            </div>
+        </section>
+
+        <!-- Main Actions -->
+        <section class="actions-grid">
+            <a class="action-card" asp-controller="Tabela" asp-action="Tabela">
+                <div class="action-icon items-management">📋</div>
+                <h3 class="action-title">Gerenciar Itens</h3>
+                <p class="action-description">
+                    Visualize, edite e gerencie todos os itens perdidos e encontrados. 
+                    Aprove novos cadastros e marque itens como resolvidos.
+                </p>
+            </a>
+
+            <a class="action-card" asp-controller="Usuario" asp-action="TabelaUsuarios">
+                <div class="action-icon users-management">👤</div>
+                <h3 class="action-title">Gerenciar Usuários</h3>
+                <p class="action-description">
+                    Administre contas de usuários, defina permissões e 
+                    monitore atividades dos membros da plataforma.
+                </p>
+            </a>
+
+            <a class="action-card" asp-controller="Tabela" asp-action="ListaPublica">
+                <div class="action-icon reports">📜</div>
+                <h3 class="action-title">Lista dos Itens</h3>
+                <p class="action-description">
+                    Visualize os itens perdidos onde os usuarios tem acesso. 
+                    Veja pela visão do usuário
+                </p>
+            </a>
+
+            @* <a class="action-card">
+                <div class="action-icon reports">📊</div>
+                <h3 class="action-title">Relatórios</h3>
+                <p class="action-description">
+                    Acesse estatísticas detalhadas, gere relatórios 
+                    e analise o desempenho da plataforma.
+                </p>
+            </a> *@
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+            <h2 class="activity-title">
+                📈 Atividade Recente
+            </h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon found">📱</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Novo item encontrado: iPhone 13 Pro</div>
+                        <div class="activity-time">Há 2 horas</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon user">👤</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Novo usuário registrado: Maria Silva</div>
+                        <div class="activity-time">Há 4 horas</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon lost">🎒</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Item perdido reportado: Mochila azul</div>
+                        <div class="activity-time">Há 6 horas</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon found">💻</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Item reunido com dono: Notebook Dell</div>
+                        <div class="activity-time">Há 8 horas</div>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon user">👤</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Usuário promovido a moderador: João Santos</div>
+                        <div class="activity-time">Há 1 dia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

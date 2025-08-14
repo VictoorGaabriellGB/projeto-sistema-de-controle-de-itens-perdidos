@@ -30,6 +30,9 @@ namespace Inova.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CaminhoImagem")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Celular")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -41,6 +44,10 @@ namespace Inova.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Local")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -94,6 +101,7 @@ namespace Inova.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Senha")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

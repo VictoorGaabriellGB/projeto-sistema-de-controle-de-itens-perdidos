@@ -1,0 +1,31 @@
+@model IEnumerable<TabelaModel>
+
+@{
+    ViewData["Title"] = "Itens Perdidos";
+}
+
+<link rel="stylesheet" href="~/css/lista.css">
+
+    <div class="container mt-4 cards-container">
+    <h2 class="titulo-principal">Itens Perdidos</h2>
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card card-item h-100">
+                    <img src="@Url.Action("ObterImagem", "Tabela", new { id = item.Id })" 
+                         class="card-img-top" alt="@item.NomeItem" />
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@item.NomeItem</h5>
+                        <p class="card-text">@item.Tipo</p>
+                        <ul class="list-unstyled info-lista mb-3">
+                            <li><strong>Local:</strong> @item.Local</li>
+                            <li><strong>Data:</strong> @item.DataAchado.ToString("dd/MM/yyyy")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -11,7 +11,6 @@ using Microsoft.Extensions.Logging;
 
 namespace Inova.Controllers
 {
-    [PaginaRestritaSomenteAdmin]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
@@ -20,28 +19,32 @@ namespace Inova.Controllers
         {
             _usuarioRepositorio = usuarioRepositorio;
         }
-
+        [PaginaRestritaSomenteAdmin]
         public IActionResult TabelaUsuarios()
         {
             List<UsuarioModel> usuarios = _usuarioRepositorio.BuscarTodos();
             return View(usuarios);
         }
+        [PaginaRestritaSomenteAdmin]
         public IActionResult CriarUsuario()
         {
             return View();
         }
+        [PaginaRestritaSomenteAdmin]
 
         public IActionResult EditarUsuario(int id)
         {
             UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
             return View(usuario);
         }
+        [PaginaRestritaSomenteAdmin]
 
         public IActionResult DeletarUsuario(int id)
         {
             UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
             return View(usuario);
         }
+        [PaginaRestritaSomenteAdmin]
 
         public IActionResult Apagar(int id)
         {
@@ -67,6 +70,7 @@ namespace Inova.Controllers
             }
         }
 
+        [PaginaRestritaSomenteAdmin]
         [HttpPost]
         public IActionResult Criar(UsuarioModel usuario)
         {
@@ -88,6 +92,28 @@ namespace Inova.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult Criar2(UsuarioModel usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    usuario = _usuarioRepositorio.Adicionar(usuario);
+                    TempData["MensagemSucessoCadastro"] = "Usuário cadastrado com sucesso!";
+                    return RedirectToAction("Login", "Login");
+                }
+                return View(usuario);
+            }
+            catch (System.Exception erro)
+            {
+
+                TempData["MensagemErroCadastro"] = $"Ops, não foi possível cadastrar o seu usuário! Erro: {erro.Message}";
+                return View("Login", "Login");
+            }
+        }
+
+        [PaginaRestritaSomenteAdmin]
         [HttpPost]
         public IActionResult AlterarUsuario(UsuarioSemSenhaModel usuarioSemSenhaModel)
         {

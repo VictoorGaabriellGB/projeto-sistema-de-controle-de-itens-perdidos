@@ -56,30 +56,62 @@
 }
 </style>
 
-<a asp-controller="Home" asp-action="Index" class="logo-link">
-        <img src=" /Imagens/Zardon.png" alt="Logo Zardon" class="company-logo">
+
+        
+@if(Model.Perfil == Inova.Enums.PerfilEnum.Admin)
+{ 
+    <a asp-controller="Home" asp-action="IndexAdm" class="logo-link">
+      <img src=" /Imagens/Zardon.png" alt="Logo Zardon" class="company-logo">
     </a>
     <nav class="main-nav">
-        <ul>
-            @if(Model.Perfil == Inova.Enums.PerfilEnum.Admin)
-            {
-                <li>
-                    <a asp-controller="Tabela" asp-action="Tabela"
-                        class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Tabela" ? "active" : "")">
-                        Tabela
-                    </a>
-                </li>
-                <li>
-                    <a asp-controller="Usuario" asp-action="TabelaUsuarios"
-                        class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Usuario" ? "active" : "")">
-                        Usuários
-                    </a>
-                </li>
-            }
-            <li>
-                <a asp-controller="Login" asp-action="Sair" class="menu-btn">
-                    Sair
-                </a>
-            </li>
-        </ul>
+      <ul>
+    
+          <li>
+              <a asp-controller="Tabela" asp-action="Tabela"
+                  class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Tabela" ? "active" : "")">
+                  Tabela
+              </a>
+          </li>
+          <li>
+              <a asp-controller="Usuario" asp-action="TabelaUsuarios"
+                  class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Usuario" ? "active" : "")">
+                  Usuários
+              </a>
+          </li>
+          <li>
+          <a asp-controller="Login" asp-action="Sair" class="menu-btn">
+              Sair
+          </a>
+          </li>
+      </ul>
     </nav>
+}
+@if(Model.Perfil == Inova.Enums.PerfilEnum.Padrao)
+{
+  <a asp-controller="Home" asp-action="Index" class="logo-link">
+      <img src=" /Imagens/Zardon.png" alt="Logo Zardon" class="company-logo">
+  </a>
+    <nav class="main-nav">
+      <ul>
+
+        <li>
+          <a href="#lost-item" class="menu-btn">
+            <i class="fa fa-search"></i>Reportar Item
+            </a>
+        </li>
+
+        <li>
+              <a asp-controller="Tabela" asp-action="ListaPublica"
+                  class="menu-btn @(ViewContext.RouteData.Values["controller"].ToString() == "Tabela" ? "active" : "")">
+                  Tabela
+              </a>
+          </li>
+
+        <li>
+          <a asp-controller="Login" asp-action="Sair" class="menu-btn">
+              Sair
+          </a>
+        </li>
+      </ul>
+    </nav>
+}

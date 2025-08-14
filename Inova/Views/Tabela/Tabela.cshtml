@@ -71,6 +71,7 @@
                         <th scope="col">Número para Contato</th>
                         <th scope="col">Email</th>
                         <th scope="col">Data do Achado</th>
+                        <th scope="col">Local</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -87,6 +88,7 @@
                         <td>@item.Celular</td>
                         <td>@item.Email</td>
                         <td>@item.DataAchado.ToShortDateString()</td>
+                        <td>@item.Local</td>
                         <td class="d-flex gap-2">
                             <a asp-controller="Tabela" asp-action="Editar" asp-route-id="@item.Id" class="btn btn-sm btn-warning"
                             id="btnEditar">

@@ -1007,7 +1007,6 @@ C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\scopedcss\bundle\
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\scopedcss\projectbundle\Inova.bundle.scp.css
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\ke8et3tytd-e9eq7oib02.gz
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\arvdfxcrey-mlri7h7skz.gz
-C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\h2vr8je8ac-znxbwrfmcs.gz
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\o1xittt09e-61n19gt1b8.gz
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\rf2kp4tnq9-gurqitdy5c.gz
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\cyanqwk46g-bqjiyaj88i.gz
@@ -1083,3 +1082,7 @@ C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\Inova.genruntimec
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\ref\Inova.dll
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\4drd8pzw7r-ayfbyng352.gz
 C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\twehd9miwo-fg9ptjvqeq.gz
+C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\3sdvonvmqu-99ybbn2506.gz
+C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\lzz7uqlwg3-ni8i12jmkq.gz
+C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\zd88bxsi4e-5zd8p6a9a1.gz
+C:\Users\lexus\OneDrive\Desktop\InovaDF\Inova\obj\Debug\net9.0\compressed\h2vr8je8ac-aunr5hpvxn.gz

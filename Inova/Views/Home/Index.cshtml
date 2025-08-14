@@ -1,7 +1,9 @@
-﻿@{
+﻿@model UsuarioModel
+@{
     ViewData["Title"] = "Página Inicial";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 @if(TempData["MensagemSucessoHome"] != null)
 {
@@ -62,7 +64,7 @@
                 <a class="btn">Reportar Perdido</a>
             </div>
 
-            <div class="action-card found" onclick="openModal('found')">
+            <div class="action-card found" id="lost-item">
                 <i class="fas fa-smile"></i>
                 <h3>Encontrei Algo</h3>
                 <p>Encontrou um item que não é seu? Ajude alguém cadastrando o achado em nossa plataforma.</p>

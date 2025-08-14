@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inova")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bedfac77c1e4e8f4b16c07b647cdb79ebefb6fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef43faecb02931a9f15bee00328e166a7ad7d70b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inova")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inova")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
